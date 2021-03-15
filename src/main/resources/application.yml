@@ -1,0 +1,25 @@
+spring:
+  redis:
+    host: localhost
+    port: 8080
+  datasource:
+    url: jdbc:postgresql://localhost:54320/august
+    username: postgres
+    password: password
+  jpa:
+    properties:
+      hibernate:
+        formatSql: true
+        jdbc:
+          lob:
+            non-contextual-creation: true
+    databasePlatform: "org.hibernate.dialect.PostgreSQLDialect"
+    show-sql: false
+    hibernate:
+      ddl-auto: update
+    open-in-view: false
+server:
+  servlet:
+    encoding:
+      charset: utf-8
+      enabled: true
